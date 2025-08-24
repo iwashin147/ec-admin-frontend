@@ -8,58 +8,42 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier src --write --ignore-unknown",
-    "prepare": "husky",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.14.0",
-    "@fontsource/material-icons": "^5.1.1",
-    "@fontsource/roboto": "^5.1.1",
-    "@hookform/resolvers": "^4.0.0",
-    "@mui/icons-material": "^6.4.3",
-    "@mui/material": "^6.4.3",
-    "@mui/material-nextjs": "^6.4.3",
-    "@mui/x-data-grid": "^7.26.0",
-    "@mui/x-date-pickers": "^7.26.0",
-    "@mui/x-tree-view": "^7.26.0",
-    "@reduxjs/toolkit": "^2.5.1",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/material-icons": "^5.2.5",
+    "@fontsource/roboto": "^5.2.6",
+    "@hookform/resolvers": "^5.2.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
+    "@mui/material-nextjs": "^7.3.0",
+    "@tanstack/react-query": "^5.85.5",
     "dayjs": "^1.11.13",
-    "next": "15.1.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.54.2",
-    "react-redux": "^9.2.0",
-    "zod": "^3.24.2"
+    "next": "15.5.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
+    "zod": "^4.1.1",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.4",
-    "@eslint/eslintrc": "^3",
-    "@storybook/addon-essentials": "^8.5.3",
-    "@storybook/addon-interactions": "^8.5.3",
-    "@storybook/addon-onboarding": "^8.5.3",
-    "@storybook/addon-themes": "^8.5.3",
-    "@storybook/blocks": "^8.5.3",
-    "@storybook/nextjs": "^8.5.3",
-    "@storybook/react": "^8.5.3",
-    "@storybook/test": "^8.5.3",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/react": "^16.2.0",
-    "@types/node": "^20",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-storybook": "^0.11.2",
+    "@eslint/eslintrc": "^3.3.1",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^20.19.11",
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.34.0",
+    "eslint-config-next": "15.5.0",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "prettier": "3.4.2",
-    "storybook": "^8.5.3",
-    "typescript": "^5.7.3"
+    "lint-staged": "^16.1.5",
+    "prettier": "3.6.2",
+    "typescript": "^5.9.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -67,11 +51,6 @@
     ],
     "*": [
       "prettier --write --ignore-unknown"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
     ]
   }
 }

@@ -1,9 +1,6 @@
-import McTextInput from "@/features/shared/components/input/McTextInput";
-import { selectCount } from "@/features/counter/slice/counterSlice";
+import McTextInput from "@/components/input/McTextInput";
 import { CountFormInput } from "@/features/counter/types/CounterFormInput";
-import { Box, Button, Paper, Stack, Typography } from "@mui/material";
-import Grid from "@mui/material/Grid2";
-import { useSelector } from "react-redux";
+import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
 import useCounterForm from "../hooks/useCounterForm";
 /**
  * カウンターページコンポーネントのprops
@@ -11,7 +8,7 @@ import useCounterForm from "../hooks/useCounterForm";
 interface CounterFormProps {
   handleIncrementClick: () => void;
   handleDecrementClick: () => void;
-  handleSubmmit: (input: CountFormInput) => void;
+  handleSubmit: (input: CountFormInput) => void;
 }
 
 /**
@@ -25,8 +22,8 @@ export default function CounterForm({
    * react hook formの設定
    */
   const { control, onSubmit } = useCounterForm();
-  // selectoreでカウントを取得
-  const count = useSelector(selectCount);
+  // selectorでカウントを取得
+
 
   return (
     <Stack component="form" onSubmit={onSubmit}>
@@ -62,7 +59,7 @@ export default function CounterForm({
                 </Button>
               </Box>
               <Box sx={{ padding: 5 }}>
-                <Typography>{count}</Typography>
+                <Typography></Typography>
               </Box>
             </Box>
           </Box>

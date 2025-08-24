@@ -2,11 +2,32 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Next.js: フルスタックデバッグ",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+      "runtimeArgs": ["--inspect"],
+      "skipFiles": ["<node_internals>/**"],
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "killOnServerStop": true,
+        "pattern": "- Local:.+(https?://.+)",
+        "uriFormat": "%s",
+        "webRoot": "${workspaceFolder}",
+        "userDataDir": "C:\\Users\\notim\\AppData\\Local\\Google\\Chrome\\User Data"
+      }
+    },
+    {
+      "name": "Next.js: サーバサイド用のデバッグ",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm dev"
+    },
+    {
+      "name": "Next.js: クライアントサイド用のデバッグ",
       "type": "chrome",
       "request": "launch",
-      "name": "next client",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
+      "url": "http://localhost:3001"
     }
   ]
 }

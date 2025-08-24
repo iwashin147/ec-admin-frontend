@@ -1,7 +1,7 @@
-import { incrementByAmount } from "@/features/counter/slice/counterSlice";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+
 import { CountFormInput, countFormSchema } from "../types/CounterFormInput";
 
 export default function useCounterForm() {
@@ -18,12 +18,11 @@ export default function useCounterForm() {
     resolver: zodResolver(countFormSchema),
   });
 
-  const dispatch = useDispatch();
+
 
   const _onSubmit: SubmitHandler<CountFormInput> = (input) => {
     reset(input);
-    //
-    dispatch(incrementByAmount(input.count));
+
   };
 
   return {

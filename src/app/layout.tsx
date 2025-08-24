@@ -1,5 +1,5 @@
-import McGlobalHeader from "@/features/shared/components/McGlobalHeader";
-import StoreProvider from "@/provider/StoreProvider";
+import McGlobalHeader from "@/components/McGlobalHeader";
+import ThemeRegistry from "@/components/ThemeRegistry";
 import theme from "@/styles/theme";
 import { CssBaseline } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
@@ -25,17 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang="ja">
+      {/*<html lang="ja" suppressHydrationWarning>*/}
       <body className={roboto.variable}>
-        <StoreProvider>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-              <McGlobalHeader />
-              {children}
-            </AppRouterCacheProvider>
-          </ThemeProvider>
-        </StoreProvider>
+        <ThemeRegistry>
+          <McGlobalHeader />
+          {children}
+        </ThemeRegistry>
       </body>
     </html>
   );
